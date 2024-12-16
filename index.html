@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header id="header" class="header">
         <div class="header__content">
             <h1 class="header__title">Fleurs d’oranger & chats errants</h1>
-            
+
             <button class="header__burger" aria-label="Menu Burger">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-        </button>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
         </div>
-        
+
         <nav class="header__nav">
-           
+
             <ul class="nav__list">
-                <li><img src="images/mini_logo.png" alt="logo Fleurs d'oranger & chats errants" class="nav__logo"/></li>
+                <li><img src="images/mini_logo.png" alt="logo Fleurs d'oranger & chats errants" class="nav__logo" />
+                </li>
                 <li><a href="#story">Histoire</a></li>
                 <li><a href="#characters">Personnages</a></li>
                 <li><a href="#place">Lieu</a></li>
                 <li><a href="#studio">Studio Koukaki</a></li>
-                <li><img class="nav__logo" src="images/Studio_Koukaki.png"/></li>
+                <li><img class="nav__logo" src="images/Studio_Koukaki.png" /></li>
             </ul>
         </nav>
     </header>
@@ -35,81 +39,86 @@
 
         <section class="banner scroll">
             <img class="image  fadeInUp scroll" src="images/logo.png" alt="logo Fleurs d'oranger & chats errants">
-            <video 
-            id="background-video"
-            class="hidden"  
-            loop 
-            muted  
-            alt="vidéo d'animation démonstrative"
-            src="images/video.mp4"
-            >
+            <video id="background-video" class="hidden" loop muted alt="vidéo d'animation démonstrative"
+                src="images/video.mp4">
         </section>
-        
+
         <section id="story" class="story">
             <h2 class="story__title scroll">
-            <span >L'</span>
-            <span >Histoire</span>
+                <span>L'</span>
+                <span>Histoire</span>
             </h2>
             <article class="story__article scroll">
-                <p>Loin, très loin, au delà des monts Karma, à mille lieues des pays Mizukage et Kagura, demeurent les Nekos Nekos. Ils vivent en retrait, sur les côtes du Funato, un vaste océan d’arbres fruitier. Un petit ruisseau coule en leur lieu et les approvisionne en règlalades nécessaires en tout genre; un pays paradisiaque... Sauf pour Kawaneko, le premier chat à avoir développé une intolérance à la fleur d’oranger, qui malheureusement pour lui est la base de toute productions du pays. Serait-ce une maladie, un virus, le début d’une pandémie ou un sort jeté par le sorcier Jaakuna ? Kawaneko et sa bande partent en quête de réponses pour arrêter la malveillant Jaakuna et retrouver l’ordre chez les Nekos Nekos.</p>
+                <p>Loin, très loin, au delà des monts Karma, à mille lieues des pays Mizukage et Kagura, demeurent les
+                    Nekos Nekos. Ils vivent en retrait, sur les côtes du Funato, un vaste océan d’arbres fruitier. Un
+                    petit ruisseau coule en leur lieu et les approvisionne en règlalades nécessaires en tout genre; un
+                    pays paradisiaque... Sauf pour Kawaneko, le premier chat à avoir développé une intolérance à la
+                    fleur d’oranger, qui malheureusement pour lui est la base de toute productions du pays. Serait-ce
+                    une maladie, un virus, le début d’une pandémie ou un sort jeté par le sorcier Jaakuna ? Kawaneko et
+                    sa bande partent en quête de réponses pour arrêter la malveillant Jaakuna et retrouver l’ordre chez
+                    les Nekos Nekos.</p>
             </article>
-            
-            
-            
+
+
+
             <article id="characters" class=" scroll">
-                
-                        
-                        <div class="swiper-container">
-                        <h3 class="">Les personnages</h3> 
-                        <div class="swiper-wrapper">
-                            
-                            <?php
-                            while ( $characters_query->have_posts() ) {
-                                $characters_query->the_post();
-                                echo '<figure class="swiper-slide">';
-                                echo get_the_post_thumbnail( get_the_ID(), 'full' );
-                                echo '<figcaption>';
-                                the_title();
-                                echo'</figcaption>';
-                                echo '</figure>';
-                            }
-                            ?>
-                            
-                        </div>
-                        </div>
-                    </article>
-        
-                    
-                    
-                
+
+
+                <div class="swiper-container">
+                    <h3 class="">Les personnages</h3>
+                    <div class="swiper-wrapper">
+
+                        <figure class="swiper-slide">
+                            <figcaption>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                </div>
+            </article>
+
+
+
+
             </article>
             <article id="place" class=" scroll">
-            <div>
-                <h3 class="place scroll">Le Lieu</h3>
-                
-                <p>
-                Le pays fantastique des Nekos Nekos : Nekosnotochi. Loin, très loin, au delà des monts Karma, à mille lieues des pays Mizukage et Kagura. Ils vivent en retrait, sur les côtes du Funato, un vaste océan d’arbres fruitier. Un petit ruisseau coule en leur lieu et les approvisionne en règlalades nécessaires en tout genre; un pays paradisiaque...
-                </p>
-                
-            </div>
-        </article>
+                <div>
+                    <h3 class="place scroll">Le Lieu</h3>
+
+                    <p>
+                        Le pays fantastique des Nekos Nekos : Nekosnotochi. Loin, très loin, au delà des monts Karma, à
+                        mille lieues des pays Mizukage et Kagura. Ils vivent en retrait, sur les côtes du Funato, un
+                        vaste océan d’arbres fruitier. Un petit ruisseau coule en leur lieu et les approvisionne en
+                        règlalades nécessaires en tout genre; un pays paradisiaque...
+                    </p>
+
+                </div>
+            </article>
         </section>
-        
+
         <section id="studio">
             <h2 class="scroll">
-                <span >Studio</span> 
-                <span >Koukaki</span>
+                <span>Studio</span>
+                <span>Koukaki</span>
             </h2>
             <div>
-                <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
-                <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
+                <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et
+                    distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons
+                    deux sections en activité : le long métrage et le court métrage. Nous développons des films
+                    fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
+                <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et
+                    commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur
+                    incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables
+                    succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs
+                    d’oranger et chats errants”.</p>
             </div>
         </section>
         <section id="oscar" class="scroll">
-            <h3 class="oscar__title">Fleurs d’oranger & chats errants<span> est nominé aux Oscars </span>Short Film Animated de 2022 !</h3>
+            <h3 class="oscar__title">Fleurs d’oranger & chats errants<span> est nominé aux Oscars </span>Short Film
+                Animated de 2022 !</h3>
             <img class="oscar__logo " src="images/oscar.png">
         </section>
-        </main>  
+    </main>
 
 
     <footer id="colophon" class="site-footer scroll">
@@ -118,10 +127,12 @@
             <li><a href="#">STUDIO KOUKAKI</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-	</footer>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/custom-swiper.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/video-loader.js"></script>
 </body>
+
 </html>

@@ -60,6 +60,11 @@
       transform: translateY(0);
     }
   }
+
+  body{
+    background: #FFF5E9;
+  }
+
   .scroll {
     opacity: 0;
   }
