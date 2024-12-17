@@ -63,6 +63,79 @@
 
   body{
     background: #FFF5E9;
+    margin: 0;
+  }
+
+  h2{
+    color: #FFF5E9;
+    font-size: 4.429rem;
+    background-image: url("images/purple_studio_bg.png");
+    background-color: #FFF5E9;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em 2em;
+    margin: 0;
+    background-position: center;
+    text-align: center;
+  }
+
+  h3{
+    background-image: url("images/orange_place_bg.png");
+    color: #FFF5E9;
+    font-size: 3rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em 2em;
+    margin: 0;
+    background-position: center;
+    text-align: center;
+  }
+
+  .story {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story__title::after{
+    content: url("images/Sunflower.png");
+    position: absolute;
+    left: 0.7em;
+    top: 6em;
+}
+
+.story__title::before{
+    content: url("images/sunflower_leaves.png");
+    position: absolute;
+    left: 0;
+    top: 1.8em;
+    z-index: -1;
+}
+
+  .story__article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    font-size: 15px;
+    padding-bottom: 2em;
+  }
+
+  .story__article::before{
+    content: url("images/hibiscus_leaves.png");
+    position: absolute;
+    left: 50%;
+    top: 8em;
+    z-index: -1;
+  }
+
+  .story__article::after{
+    content: url("images/Hibiscus.png");
+    position: absolute;
+    left: calc(50% + 414px);
+    top: 2em;
   }
 
   .scroll {
@@ -104,7 +177,14 @@
     animation-delay: 1s;
     opacity: 0;
   }
-  
+  .banner{
+    min-height: 806px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .banner.scroll.active {
     animation: fadeInDown 1s ease-out forwards;
   }
@@ -112,7 +192,6 @@
   #background-video {
     width: 100%;
     max-width: 1440px;
-    height: 806px;
     margin: 0 auto;
     -o-object-fit: cover;
        object-fit: cover;
@@ -336,6 +415,12 @@
   
   #characters {
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
+    margin: 6em;
+    text-align: center;
   }
   #characters .swiper-container {
     overflow: hidden;
@@ -355,10 +440,30 @@
   }
   
   #place {
+    display: flex;
     background-image: none !important;
     position: relative;
     overflow: hidden;
-  }
+    min-height: 699px;
+    width: 100%;
+}
+
+#place > div{
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em 2em;
+    margin: 0;
+    background-position: center;
+    text-align: center;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 6em;
+}
+
   #place::before {
     content: "";
     position: absolute;
@@ -398,9 +503,24 @@
     z-index: 10;
     position: relative;
   }
-  #studio div::before {
+
+#studio > div{
+    display: flex;
+    justify-content: space-between;
+    width: 66.66%;
+    margin: auto;
+}
+
+#studio > div p{
+    width: 44.5%;
+}
+
+  #studio> div::before {
     top: 0;
     animation: fadeInUp 1s ease-out forwards;
+    content: url("images/trple-leaf.png");
+    position: absolute;
+    left: calc(50% - 17.225px);
   }
   
   #oscar {
@@ -440,4 +560,26 @@
     left: calc(50% - 323px);
     bottom: -28.5em;
     z-index: -1;
-  }/*# sourceMappingURL=styles.css.map */
+  }
+
+  .site-footer {
+    position: relative;
+    display: flex;
+    padding-top: 18em;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+
+.site-footer ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style-type: none;
+    
+}
+
+.site-footer li{
+    text-decoration: none;
+}
