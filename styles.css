@@ -118,8 +118,8 @@
 .story__title::after{
     content: url("images/Sunflower.png");
     position: absolute;
-    left: 0.7em;
-    top: 6em;
+    left: 0.55em;
+    top: 5.5em;
 }
 
 .story__title::before{
@@ -497,7 +497,7 @@
   }
   #place h3::before, #place h3::after {
     position: absolute;
-    filter: blur(10px);
+    
   }
   #place h3::before {
     content: url("images/big_cloud.png");
@@ -519,15 +519,15 @@
 
 #studio h2::before{
     content: url("images/random_flower.png");
-    position:relative;
-    right: 3em;
+    position:absolute;
+    left: -1em;
 }
 
 #studio h2::after{
     content: url("images/flower.png");
-    position: relative;
-    left: 2em;
-    top: 1.2em;
+    position: absolute;
+    right: 0.1em;
+    
 }
 
   #studio div {
@@ -564,12 +564,14 @@
   }
   #oscar::before {
     content: url("images/Sunflower.png");
+    opacity: 0;
     left: 8em;
     top: -8em;
     position: relative;
   }
   #oscar::after {
     content: url("images/orchid.png");
+    opacity: 0;
     right: -4em;
     bottom: 15em;
     position: relative;
