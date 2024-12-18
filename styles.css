@@ -1,3 +1,18 @@
+@media (max-width: 1439px) {
+    #oscar {
+        flex-direction: column !important;
+    }
+    #oscar::after {
+        left: 21em;
+        bottom: 12em;
+    }
+
+    #oscar::before {
+        left: -25em !important;
+        top: 7em !important;
+    }
+}
+
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -64,6 +79,7 @@
   body{
     background: #FFF5E9;
     margin: 0;
+    font-family:"roboto mono";
   }
 
   h2{
@@ -77,6 +93,7 @@
     margin: 0;
     background-position: center;
     text-align: center;
+    overflow: hidden;
   }
 
   h3{
@@ -499,6 +516,20 @@
   #studio h2 {
     background-image: url("images/purple_studio_bg.png");
   }
+
+#studio h2::before{
+    content: url("images/random_flower.png");
+    position:relative;
+    right: 3em;
+}
+
+#studio h2::after{
+    content: url("images/flower.png");
+    position: relative;
+    left: 2em;
+    top: 1.2em;
+}
+
   #studio div {
     z-index: 10;
     position: relative;
@@ -548,6 +579,9 @@
     font-size: 42px;
     font-weight: 700;
     letter-spacing: -0.84px;
+    width: 834px;
+    height: 273px;
+
   }
   #oscar .oscar__logo {
     width: 278px;
@@ -574,12 +608,17 @@
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     list-style-type: none;
     
 }
 
 .site-footer li{
+    text-decoration: none;
+}
+
+.site-footer a{
+    color: #000;
     text-decoration: none;
 }
